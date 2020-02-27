@@ -1,0 +1,88 @@
+﻿@model MvcStok.Models.Entity.tblKullanici
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Business Login Form Responsive Widget Template :: w3layouts</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Business Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- css files -->
+    <link href="~/isGirisWeb/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/isGirisWeb/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //css files -->
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- //google fonts -->
+
+</head>
+<body>
+
+    <div class="signupform">
+        <div class="container">
+            <!-- main content -->
+            <div class="agile_info">
+                <div class="w3l_form">
+                    <div class="left_grid_info">
+                        <h1>Yetki Kontrol Sayfası</h1>
+                        <p>Müşteriler bilgilerine bakmak sadece yetkisi olan kişiler tarafndan görüntülenebilir. </p>
+                        <img src="~/isGirisWeb/images/image.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="w3_info">
+                    <h2>Hesabına Giri Yap</h2>
+                    <p>Bilgilerinizi Giriniz.</p>
+                    @using (Html.BeginForm("GirisYap", "Guvenlik", FormMethod.Post))
+                    {
+                        <label>Email Adres</label>
+                        <div class="input-group">
+                            <span class="fa fa-envelope" aria-hidden="true"></span>
+                            <input type="email" placeholder="Email Adresini Giriniz" required="" name="Ad">
+                        </div>
+                        <label>Şifreniz</label>
+                        <div class="input-group">
+                            <span class="fa fa-lock" aria-hidden="true"></span>
+                            <input type="Password" placeholder="Şifrenizi Giriniz" required="" name="Sifre">
+                        </div>
+                        <div class="login-check">
+                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Beni hatırla..</label>
+                        </div>
+                        <button class="btn btn-danger btn-block" type="submit">Giriş Yap</button>
+                    }
+
+
+                    <p class="account">Bizimle İletişim Kurmak İster misin? <a href="https://github.com/enesulusoy">EUTasarım</a></p>
+                    <p class="account1">Bir hesabın yok mu? <a href="https://github.com/enesulusoy">Kayıt Ol</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <p>&copy; 2019 Yetkili Giriş Sayfası. Tüm Hakları Saklıdır | Design by <a href="https://github.com/enesulusoy" target="blank">Enes Ulusoy</a></p>
+        </div>
+        <!-- footer -->
+    </div>
+
+</body>
+</html>
